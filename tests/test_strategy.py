@@ -22,6 +22,12 @@ TEST_CONFIG = Config(
     poll_interval_seconds=60,
     telegram_bot_token="",
     telegram_chat_id="",
+    paper_trading=True,
+    initial_capital=3000.0,
+    trade_percent=30.0,
+    min_profit_percent=0.5,
+    buy_fee_percent=0.1,
+    sell_fee_percent=0.1,
 )
 
 

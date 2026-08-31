@@ -49,6 +49,13 @@ class Config:
     telegram_bot_token: str
     telegram_chat_id: str
 
+    paper_trading: bool
+    initial_capital: float
+    trade_percent: float
+    min_profit_percent: float
+    buy_fee_percent: float
+    sell_fee_percent: float
+
 
 def load_config() -> Config:
     return Config(
@@ -70,4 +77,10 @@ def load_config() -> Config:
         poll_interval_seconds=_int("POLL_INTERVAL_SECONDS", 60),
         telegram_bot_token=os.getenv("TELEGRAM_BOT_TOKEN", ""),
         telegram_chat_id=os.getenv("TELEGRAM_CHAT_ID", ""),
+        paper_trading=_bool("PAPER_TRADING", True),
+        initial_capital=_float("INITIAL_CAPITAL", 3000.0),
+        trade_percent=_float("TRADE_PERCENT", 30.0),
+        min_profit_percent=_float("MIN_PROFIT_PERCENT", 0.5),
+        buy_fee_percent=_float("BUY_FEE_PERCENT", 0.1),
+        sell_fee_percent=_float("SELL_FEE_PERCENT", 0.1),
     )

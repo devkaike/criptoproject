@@ -17,7 +17,7 @@ def get_logger(name: str) -> logging.Logger:
     stream_handler.setFormatter(formatter)
     logger.addHandler(stream_handler)
 
-    file_handler = logging.FileHandler("trader.log")
+    file_handler = logging.FileHandler("trader.log", encoding="utf-8")
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
 

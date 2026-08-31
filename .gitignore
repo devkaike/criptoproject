@@ -2,6 +2,7 @@
 __pycache__/
 *.pyc
 state.json
+paper_state.json
 *.log
 .venv/
 venv/
